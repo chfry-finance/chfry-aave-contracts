@@ -1,0 +1,144 @@
+{
+  "LendingPoolAddressesProvider": {
+    "kovan": {
+      "address": "0x2631bB03A9fF1cAceDAB5D199F4E2805f87dA79A",
+      "deployer": "0xEf884C06F2aBf71040ff28976E3a85DDa8813ab2"
+    }
+  },
+  "LendingPoolAddressesProviderRegistry": {
+    "kovan": {
+      "address": "0xbC7Fe19757b45b7821Ea56Ab7d145FFE1Fa23DE4",
+      "deployer": "0xEf884C06F2aBf71040ff28976E3a85DDa8813ab2"
+    }
+  },
+  "ReserveLogic": {
+    "kovan": {
+      "address": "0xAdbb75C12944E53d51238870d7ac243E9E3729A2",
+      "deployer": "0xEf884C06F2aBf71040ff28976E3a85DDa8813ab2"
+    }
+  },
+  "GenericLogic": {
+    "kovan": {
+      "address": "0xA97790309f7a85B927abe0Fc15aC0faF6d1ED60F",
+      "deployer": "0xEf884C06F2aBf71040ff28976E3a85DDa8813ab2"
+    }
+  },
+  "ValidationLogic": {
+    "kovan": {
+      "address": "0x59B930de1b23147Fb484A2990Afd820078289e7c",
+      "deployer": "0xEf884C06F2aBf71040ff28976E3a85DDa8813ab2"
+    }
+  },
+  "LendingPoolImpl": {
+    "kovan": {
+      "address": "0x8f254f0358Bd7814672A98ebBb11491681dd1f94"
+    }
+  },
+  "LendingPool": {
+    "kovan": {
+      "address": "0x5c78dc86b80cCD8401a90237F788665378408628"
+    }
+  },
+  "LendingPoolConfiguratorImpl": {
+    "kovan": {
+      "address": "0xE246D9c2dFF32DF7ee8129122BCAc2f858B7c95f"
+    }
+  },
+  "LendingPoolConfigurator": {
+    "kovan": {
+      "address": "0xBFB74DcA76dec04A843f226F730376b1a9EBF871"
+    }
+  },
+  "StableAndVariableTokensHelper": {
+    "kovan": {
+      "address": "0xb787C1efc53853E4d3Ec65DDCf9986cEdB6F0E71",
+      "deployer": "0xEf884C06F2aBf71040ff28976E3a85DDa8813ab2"
+    }
+  },
+  "ATokensAndRatesHelper": {
+    "kovan": {
+      "address": "0x6A04Ff07b1755314344908725315357922E05CcB",
+      "deployer": "0xEf884C06F2aBf71040ff28976E3a85DDa8813ab2"
+    }
+  },
+  "AToken": {
+    "kovan": {
+      "address": "0x34A5afaebba86187BeFc54AFCa65D79c41E0A158",
+      "deployer": "0xEf884C06F2aBf71040ff28976E3a85DDa8813ab2"
+    }
+  },
+  "DelegationAwareAToken": {
+    "kovan": {
+      "address": "0x73D7Fd3c94c709c2336157d16817EEd8d97681b6",
+      "deployer": "0xEf884C06F2aBf71040ff28976E3a85DDa8813ab2"
+    }
+  },
+  "StableDebtToken": {
+    "kovan": {
+      "address": "0x6CC5F5492692D146d548399665B740d8475dEe87",
+      "deployer": "0xEf884C06F2aBf71040ff28976E3a85DDa8813ab2"
+    }
+  },
+  "VariableDebtToken": {
+    "kovan": {
+      "address": "0x5A1192585Ef1b11AA789e3Ff9817537A085360Bd",
+      "deployer": "0xEf884C06F2aBf71040ff28976E3a85DDa8813ab2"
+    }
+  },
+  "AaveOracle": {
+    "kovan": {
+      "address": "0x4578344f10246e3dc96b7D2c6E7854fF3798678A",
+      "deployer": "0xEf884C06F2aBf71040ff28976E3a85DDa8813ab2"
+    }
+  },
+  "AaveProtocolDataProvider": {
+    "kovan": {
+      "address": "0x095Eb8f4Eb5AAb0d6C6adEe627BE5c2eD0c63E87",
+      "deployer": "0xEf884C06F2aBf71040ff28976E3a85DDa8813ab2"
+    }
+  },
+  "WETHGateway": {
+    "kovan": {
+      "address": "0x0dD13D97feE288cdfB70122c28eb8B9f78149c4B",
+      "deployer": "0xEf884C06F2aBf71040ff28976E3a85DDa8813ab2"
+    }
+  },
+  "DefaultReserveInterestRateStrategy": {
+    "kovan": {
+      "address": "0x7f83ea6396A23fdf4cEB8304F7012Ff05193fa33",
+      "deployer": "0xEf884C06F2aBf71040ff28976E3a85DDa8813ab2"
+    }
+  },
+  "rateStrategyStableTwo": {
+    "kovan": {
+      "address": "0xC2FEB0d99Ae2a3AF669251a24F46e66929eE0d11"
+    }
+  },
+  "WalletBalanceProvider": {
+    "kovan": {
+      "address": "0xEAbB071ed2D62B51A5F54496a04A81Ae0Bf98BE3",
+      "deployer": "0xEf884C06F2aBf71040ff28976E3a85DDa8813ab2"
+    }
+  },
+  "UiPoolDataProvider": {
+    "kovan": {
+      "address": "0x4Cf47793c69DD87B4c275Bcbd16Fd3e8CC331787",
+      "deployer": "0xEf884C06F2aBf71040ff28976E3a85DDa8813ab2"
+    }
+  },
+  "rateStrategyWETH": {
+    "kovan": {
+      "address": "0xF13652329C7152D6D6b47Ddf4b657622AB8111d4"
+    }
+  },
+  "rateStrategyVolatileOne": {
+    "kovan": {
+      "address": "0x7f83ea6396A23fdf4cEB8304F7012Ff05193fa33"
+    }
+  },
+  "rateStrategyVolatileTwo": {
+    "kovan": {
+      "address": "0xD80234ba007a176a0c56816746b3022187E9CB58"
+    }
+  }
+}
