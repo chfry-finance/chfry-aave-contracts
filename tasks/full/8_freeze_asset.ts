@@ -44,7 +44,7 @@ task('full:freeze', 'Deploy lending pool for dev enviroment')
 
     // Pause market during deployment
     console.log('freezeReserve to MKR');
-    let mkr: string = '0xF7190d0ed47b3E081D16925396A03363DdB82281'
+    let mkr: string = '0x3878E7d2a355FB01a06db656690Cb8795f6663F2'
     await waitForTx(await lendingPoolConfiguratorProxy.connect(admin).freezeReserve(mkr));
   });
 
