@@ -255,10 +255,10 @@ export const CommonsConfig: ICommonConfiguration = {
     */
     //TODO 这是我们自己部署的资产, USD是官方的
     [eEthereumNetwork.kovan]: {
-      DAI: '0x20E3e0b7CB3c2abBBE3A95b1dadA805C062412d6', //用自己的DAI，但是使用kovan官方的预言机
-      LINK: '0x952F5fbd6BAf2F6d99EbADdD3035B063f17a3F10',
-      WBTC: '0x239Bb33b741eBB7fA294b12d0F897be02E4Ee81F',
-      USDC: '0x82aC465Dde5CdEB2A32f9Ea0F6Bb77d0a95042a2',
+      DAI: '0x3CE6f431129fd5cb5f47e374bA5E79EF0F3b87Ff', //用自己的DAI
+      LINK: '0xD2CD2Fc04a7C4a3efD487123E0B899c158FF69fD',
+      WBTC: '0xb947652cE03fDB26CA7096703B6cbF4B0444b7F1',
+      USDC: '0x82aC465Dde5CdEB2A32f9Ea0F6Bb77d0a95042a2', //已经废弃
       USD: '0x9326BFA02ADD2366b30bacB125260Af641031331', //TODO 官方地址
       // AAVE: '0xd04647B7CB523bb9f26730E9B6dE1174db7591Ad', //all refer to ETH
       // BAT: '0x0e4fcEC26c9f85c3D714370c98f43C4E02Fc35Ae',
