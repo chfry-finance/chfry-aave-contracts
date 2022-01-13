@@ -33,10 +33,10 @@ contract MockAggregator {
   address public daiAddr = 0x749B1c911170A5aFEb68d4B278cD5405C718fc7F;
 
   constructor(string memory _symbol, uint256 _decimals) public {
-    symbolPairs[ETH] = daiEthPairAddr;
-    symbolPairs[DAI] = daiEthPairAddr;
-    symbolPairs[WBTC] = wbtcDAIPairAddr;
-    symbolPairs[CHAINLINK] = chainlinkDAIPairAddr;
+    symbolPairs[ETH] = ethDaiPairAddr;
+    symbolPairs[DAI] = ethDaiPairAddr;
+    symbolPairs[WBTC] = wbtcDaiPairAddr;
+    symbolPairs[CHAINLINK] = chainlinkDaiPairAddr;
 
     bytes32 symbol_ = keccak256(abi.encodePacked(_symbol));
     require(symbolPairs[symbol_] != address(0), 'not support token symbol!');
@@ -46,12 +46,10 @@ contract MockAggregator {
 
   function latestAnswer() external view returns (uint256) {
     bytes32 symbol_ = keccak256(abi.encodePacked(symbol));
-    uint256 priceTmp;
-    uint256 decimalsTmp;
 
     if (symbol_ == ETH) {
-      priceTmp,decimalsTmp = getTokenPriceToDai(ethDaiPairAddr);
-      return priceTmp*10**(decimals - decimalsTmp);
+      (uint256 priceTmp, uint256 decimalsTmp) = getTokenPriceToDai(ethDaiPairAddr);
+      return (priceTmp * 10**decimals) / 10**decimalsTmp;
     } else if (symbol_ == DAI) {
       return 10000000000000; //1$
     } else {
@@ -61,8 +59,10 @@ contract MockAggregator {
 
   // calculate price based on pair reserves
   function getTokenPriceToEth(address pairAddress) public view returns (uint256) {
-    (uint256 toDaiPrice, uint256 decimalsTmp) = getTokenPriceToDai(pairAddress);
-    return toDaiPrice / getTokenPriceToDai(ethDaiPairAddr);
+    //数量，这个币种的精度，wbc，8；chainlink，18
+    (uint256 toDaiPrice, uint256 decimals1) = getTokenPriceToDai(pairAddress);
+    (uint256 daiEthPrice, uint256 decimals2) = getTokenPriceToDai(ethDaiPairAddr);
+    return ((toDaiPrice / decimals1) * 10**decimals) / (daiEthPrice / 10**decimals2);
   }
 
   // calculate price based on pair reserves
@@ -72,7 +72,7 @@ contract MockAggregator {
     IERC20 token1 = IERC20(pair.token1());
 
     (uint256 Res0, uint256 Res1, ) = pair.getReserves();
-    if (address(token0) > daiAddr) {
+    if (address(token0) == daiAddr) {
       //dai地址小,eth, link
       uint256 res0 = Res0 * (10**token1.decimals());
 

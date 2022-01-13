@@ -186,11 +186,14 @@ library GenericLogic {
       vars.reserveUnitPrice = IPriceOracleGetter(oracle).getAssetPrice(vars.currentReserveAddress);
 
       if (vars.liquidationThreshold != 0 && userConfig.isUsingAsCollateral(vars.i)) {
+        //aToken是存款后得到的token，为何可以认为是eth价值//TODO duke
         vars.compoundedLiquidityBalance = IERC20(currentReserve.aTokenAddress).balanceOf(user);
 
+        //单个币种的抵押品价值
         uint256 liquidityBalanceETH =
           vars.reserveUnitPrice.mul(vars.compoundedLiquidityBalance).div(vars.tokenUnit);
 
+        //总抵押品价值累加
         vars.totalCollateralInETH = vars.totalCollateralInETH.add(liquidityBalanceETH);
 
         vars.avgLtv = vars.avgLtv.add(liquidityBalanceETH.mul(vars.ltv));
@@ -207,6 +210,7 @@ library GenericLogic {
           IERC20(currentReserve.variableDebtTokenAddress).balanceOf(user)
         );
 
+        //总负债包括：stable和variable的借款
         vars.totalDebtInETH = vars.totalDebtInETH.add(
           vars.reserveUnitPrice.mul(vars.compoundedBorrowBalance).div(vars.tokenUnit)
         );
