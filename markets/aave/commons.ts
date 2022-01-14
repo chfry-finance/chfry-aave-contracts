@@ -255,7 +255,7 @@ export const CommonsConfig: ICommonConfiguration = {
     */
     //TODO 这是我们自己部署的资产, USD是官方的
     [eEthereumNetwork.kovan]: {
-      DAI: '0x3CE6f431129fd5cb5f47e374bA5E79EF0F3b87Ff', //用自己的DAI
+      DAI: '0xCFF8365DcceDc26Ab9a59eD2fC6684B6E077270d', //用自己的DAI
       LINK: '0xD2CD2Fc04a7C4a3efD487123E0B899c158FF69fD',
       WBTC: '0xb947652cE03fDB26CA7096703B6cbF4B0444b7F1',
       USDC: '0x82aC465Dde5CdEB2A32f9Ea0F6Bb77d0a95042a2', //已经废弃

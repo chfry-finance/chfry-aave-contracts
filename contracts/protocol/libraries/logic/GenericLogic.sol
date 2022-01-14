@@ -212,6 +212,7 @@ library GenericLogic {
 
         //总负债包括：stable和variable的借款
         vars.totalDebtInETH = vars.totalDebtInETH.add(
+          //lasterAnswer*数量（无精度）
           vars.reserveUnitPrice.mul(vars.compoundedBorrowBalance).div(vars.tokenUnit)
         );
       }
